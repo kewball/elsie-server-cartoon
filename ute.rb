@@ -1,11 +1,9 @@
 module Ute
   ## Roll ID format: "Roll301"
-  BASE = "#{Dir.pwd}/public/testes"
+  BASE = "#{Dir.pwd}/public/elsie-uploads"
   
   def contents
     out=[]
-    # home=Dir.pwd
-    # base="#{home}/public/testes"
     Dir.glob("#{BASE}/Roll*").each do |d|
       out.push( d.split('/').pop() )
     end
@@ -36,25 +34,25 @@ module Ute
 
 end
 
-include Ute
+# include Ute
 
-## Roll ID format: "Roll301"
-# for testing, tell Ute this: 
-#     BASE = "#{Dir.pwd}/public/testes" # or whatever...
+# ## Roll ID format: "Roll301"
+# # for testing, tell Ute this: 
+# #     BASE = "#{Dir.pwd}/public/testes" # or whatever...
 
-bil = Ute.contents
-biz = Ute.numbers(bil)
-bob = Ute.next_name(biz)
-boz = Ute.make_next(bob)
+# bil = Ute.contents
+# biz = Ute.numbers(bil)
+# bob = Ute.next_name(biz)
+# boz = Ute.make_next(bob)
 
-bil.each do |x| 
-  puts "bil #{x}"
-end
-biz.each do |x| 
-  puts "biz #{x}"
-end
-puts "bob #{bob}"
-puts "boz #{boz}"
+# bil.each do |x| 
+#   puts "bil #{x}"
+# end
+# biz.each do |x| 
+#   puts "biz #{x}"
+# end
+# puts "bob #{bob}"
+# puts "boz #{boz}"
 # filename = params[:image][:filename]                                                                               
 # [ ] on filename == "jayson.txt"
 # [x] generate next "roll ID"
