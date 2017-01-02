@@ -1,0 +1,6 @@
+*logs
+
+public/*
+tmp/*
+
+!*/.gitkeep

@@ -1,0 +1,19 @@
+user: vagrant 
+group: vagrant
+chdir: /home/vagrant/src/elsie-sinatra-server
+environment: development 
+timeout: 30 
+log: logs/elsie-server.log
+pid: app.local.pid 
+socket: /tmp/uploader.sock 
+# was: port: 4020
+# was: address: 192.168.1.17
+# port: 80
+# address: 192.168.1.11
+max_conns: 1024 
+max_persistent_conns: 512 
+require: [] 
+servers: 1 
+daemonize: false
+onebyone: true 
+
