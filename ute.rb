@@ -10,6 +10,10 @@ module Ute
     out
   end
 
+  def current
+    Dir.glob("#{BASE}/Roll*").last
+  end
+
   def numbers(inray)
     outray=[]
     inray.each do |n|
@@ -29,7 +33,7 @@ module Ute
   def make_next (the_name)
     Dir.mkdir("#{BASE}/#{the_name}")
     Dir.mkdir("#{BASE}/#{the_name}/files")
-    return Dir.glob("#{BASE}/#{the_name}*")
+    path = "#{BASE}/#{the_name}/files"
   end
 
 end

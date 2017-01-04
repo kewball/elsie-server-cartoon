@@ -51,7 +51,16 @@ post '/up' do
 			@biz = Ute.numbers(@bil)
 			@bob = Ute.next_name(@biz)
 			@boz = Ute.make_next(@bob)
-			@path = @boz.pop
+			@path = @boz
+			logger.info "JAYSON JAYSON JAYSON"
+			logger.info ":bil => #{@bil} "
+			logger.info ":biz => #{@biz} " 
+			logger.info ":bob => #{@bob} "
+			logger.info "@path => #{@path} "
+		else
+			@path = Ute.current + "/files"
+			logger.info "IMAGE IMAGE IMAGE"
+			logger.info "@path => #{@path} "
 		end
 		
 		if @path
